@@ -72,3 +72,42 @@ def getRecommendations(prefs, person, similarity=sim_pearson):
   rankings.sort()
   rankings.reverse()
   return rankings
+
+def transformPrefs(prefs):
+  result = {}
+  for person in prefs:
+    for item in prefs[person]:
+      result.setdefault(item, {})
+      result[item][person] = prefs[person][item]
+
+  return result
+
+def calculateSimilarItems(prefs, n=10):
+  result = {}
+  itemPrefs = transformPrefs(prefs)
+
+  for item in itemPrefs:
+    scores = topMatches(itemPrefs, item, n=n, similarity=sim_distance)
+    result[item]=scores
+
+  return result
+
+def getRecommendedItems(prefs, itemMatch,user):
+  userRatings = prefs[user]
+  scores = {}
+  totalSim = {}
+
+  for (item,rating) in userRatings.items():
+    for (similarity, item2) in itemMatch[item]:
+      if item2 in userRatings: continue
+
+      scores.setdefault(item2, 0)
+      scores[item2]+=similarity*rating
+
+      totalSim.setdefault(item2, 0)
+      totalSim[item2]+=similarity
+
+  rankings = [(score/totalSim[item], item) for item, score in scores.items()]
+  rankings.sort()
+  rankings.reverse()
+  return rankings;
