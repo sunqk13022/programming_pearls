@@ -1,7 +1,8 @@
 CXXFLAGS=-g -Wall -O0
 LDFLAGS =
 BINARIES=main \
-				 insert_sort
+				 insert_sort \
+				 merge_sort
 
 CC=g++
 
@@ -15,6 +16,7 @@ $(BINARIES):
 
 main: main.o
 insert_sort: insert_sort.o
+merge_sort: merge_sort.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES)
