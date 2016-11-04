@@ -3,4 +3,4 @@
 
 import os
 
-os.system("./quick_sort < data_quick")
+os.system("./stack < data")
