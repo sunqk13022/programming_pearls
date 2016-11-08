@@ -1,6 +1,7 @@
 CXXFLAGS=-g -Wall -O0
 LDFLAGS =
-BINARIES=fishing
+BINARIES=fishing \
+				 link_array
 
 CC=g++
 
@@ -13,6 +14,7 @@ $(BINARIES):
 	$(CC) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
 fishing: fishing.o
+link_array: link_array.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES)
