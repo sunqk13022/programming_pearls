@@ -1,6 +1,7 @@
 CXXFLAGS=-g -Wall -O0
 LDFLAGS =
 BINARIES=main3_8 \
+				 main3_9_2 \
 				 main3_9
 
 CC=g++
@@ -16,6 +17,7 @@ $(BINARIES):
 main3_8: main3_8.cc Point.cc
 
 main3_9: main3_9.o
+main3_9_2: main3_9_2.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES) *.o
