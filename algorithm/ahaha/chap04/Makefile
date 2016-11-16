@@ -1,7 +1,8 @@
 CXXFLAGS=-g -Wall -O0
 LDFLAGS =
 BINARIES=permutation \
-				 9_card
+				 9_card \
+				 labyrinth
 
 CC=g++
 
@@ -15,6 +16,7 @@ $(BINARIES):
 
 permutation: permutation.o
 9_card: 9_card.o
+labyrinth: labyrinth.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES)
