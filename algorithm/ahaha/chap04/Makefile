@@ -1,6 +1,7 @@
 CXXFLAGS=-g -Wall -O0
 LDFLAGS =
 BINARIES=permutation \
+				 bfs \
 				 9_card \
 				 labyrinth
 
@@ -16,6 +17,7 @@ $(BINARIES):
 
 permutation: permutation.o
 9_card: 9_card.o
+bfs: bfs.o
 labyrinth: labyrinth.o
 
 clean:
