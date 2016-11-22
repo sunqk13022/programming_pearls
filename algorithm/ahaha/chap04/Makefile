@@ -7,6 +7,8 @@ BINARIES=permutation \
 				 9_card \
 				 floodfill_1 \
 				 floodfill_2 \
+				 pipeline \
+				 pipeline2 \
 				 floodfill_3 \
 				 labyrinth
 
@@ -28,6 +30,7 @@ bom_dfs: bom_dfs.o
 labyrinth: labyrinth.o
 floodfill_1: floodfill_1.o
 floodfill_2: floodfill_2.o
+pipeline2: pipeline2.o
 floodfill_3: floodfill_3.o
 
 clean:
