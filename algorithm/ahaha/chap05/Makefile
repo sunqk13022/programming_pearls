@@ -3,7 +3,8 @@ LDFLAGS =
 
 BINARIES=graph1 \
 				 graph2 \
-				 map1
+				 map1 \
+				 map2
 
 CC=g++
 
@@ -18,6 +19,7 @@ $(BINARIES):
 graph1: graph1.o
 graph2: graph2.o
 map1: map1.o
+map2: map2.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES)
