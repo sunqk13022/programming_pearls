@@ -2,7 +2,8 @@ CXXFLAGS=-g -Wall -O0
 LDFLAGS =
 
 BINARIES=map1 \
-				 map2
+				 map2 \
+				 map3
 
 CC=g++
 
@@ -16,6 +17,7 @@ $(BINARIES):
 
 map1: map1.o
 map2: map2.o
+map3: map3.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES)
