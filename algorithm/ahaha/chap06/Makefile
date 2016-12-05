@@ -3,6 +3,7 @@ LDFLAGS =
 
 BINARIES=map1 \
 				 map2 \
+				 map4 \
 				 map3
 
 CC=g++
@@ -18,6 +19,7 @@ $(BINARIES):
 map1: map1.o
 map2: map2.o
 map3: map3.o
+map4: map4.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES)
