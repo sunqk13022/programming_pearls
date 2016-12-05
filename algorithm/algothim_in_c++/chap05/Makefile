@@ -2,7 +2,8 @@ CXXFLAGS=-g -Wall -O0
 LDFLAGS =
 
 BINARIES=gcd \
-				 eval
+				 eval \
+				 divide1
 
 CC=g++
 
@@ -17,6 +18,7 @@ $(BINARIES):
 
 gcd: gcd.o
 eval: eval.o
+divide1: divide1.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES) *.o
