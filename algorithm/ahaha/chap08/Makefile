@@ -3,7 +3,8 @@ LDFLAGS =
 
 BINARIES=mintree1   \
 				 mintree2  \
-				 mintree3
+				 mintree3  \
+				 point
 
 CC=g++
 
@@ -18,6 +19,7 @@ $(BINARIES):
 mintree1: mintree1.o
 mintree2: mintree2.o
 mintree3: mintree3.o
+point: point.o
 
 clean:
 	rm -rf $(OBJ) $(BINARIES)
